@@ -65,7 +65,7 @@ def write_to_mongo(dtime, long, lat):
         client = MongoClient(connection_string)
 
         # use your UVA computing ID for the database name
-        db = client['mst3k']
+        db = client['ghn9zh']
         collection = db['locations']
         collection.insert_one({'timestamp': dtime, 'longitude': long, 'latitude': lat})
         logger.info('Output written to MongoDB')
@@ -76,3 +76,5 @@ def write_to_mongo(dtime, long, lat):
 # entrypoint fcn
 if __name__ == "__main__":
     get_iss_location()
+    
+print("This is my updated version!")
